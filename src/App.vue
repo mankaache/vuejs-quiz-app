@@ -69,8 +69,8 @@ export default {
         selected: null,
       },
       {
-        questions: "what is Vue JS",
-        answer: 0,
+        questions: "what is Vue Router",
+        answer: 1,
         options: [
           "Walking in space",
           "A routing library for vue js",
@@ -112,7 +112,14 @@ export default {
       }
     };
 
-    return { questions, score, NextQuestion, getCurrentQuestion, setAnswer };
+    return {
+      quizeCompleted,
+      questions,
+      score,
+      NextQuestion,
+      getCurrentQuestion,
+      setAnswer,
+    };
   },
 };
 </script>
@@ -126,5 +133,89 @@ export default {
 body {
   background: #271c36;
   color: #fff;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.quiz {
+  background: #382a4b;
+  padding: 1rem;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 0.5rem;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.quiz-info .question {
+  color: #8f8f8f;
+  font-size: 1.25rem;
+}
+.options {
+  margin-bottom: 1rem;
+}
+.option {
+  display: block;
+  padding: 1rem;
+  background: #271c36;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #2d213f;
+}
+.option.correct {
+  background: #2cce7d;
+}
+.option.wrong {
+  background: #ff5a5f;
+}
+.option:last-of-type {
+  margin-bottom: 0;
+}
+.option.disabled {
+  opacity: 0.5;
+}
+.option input {
+  display: none;
+}
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: #2cce7d;
+  color: #2d213f;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+}
+button:disabled {
+  opacity: 0.5;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+p {
+  color: #8f8f8f;
+  font-size: 1.25rem;
+  text-align: center;
 }
 </style>
