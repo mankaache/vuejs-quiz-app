@@ -79,6 +79,17 @@ export default {
         ],
         selected: null,
       },
+      {
+        questions: "what is Vue authentication",
+        answer: 1,
+        options: [
+          "Walking in space",
+          "A routing library for vue js",
+          "Burger sauce",
+          "verifying you are who you say you are",
+        ],
+        selected: null,
+      },
     ]);
     console.log(questions);
 
