@@ -81,7 +81,7 @@ export default {
       },
       {
         questions: "what is Vue authentication",
-        answer: 1,
+        answer: 3,
         options: [
           "Walking in space",
           "A routing library for vue js",
